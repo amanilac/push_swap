@@ -6,7 +6,7 @@
 /*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 17:16:20 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/24 14:18:14 by annamanilac      ###   ########.fr       */
+/*   Updated: 2024/06/24 14:56:53 by annamanilac      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,6 @@ void sort_three(t_node **stack_a)
 		rev_rotate_a(stack_a);
 	}
 }
-
-// void	sort_three(t_node **stack_a)
-// {
-// 	while (is_sorted(*stack_a) == 1)
-// 	{
-// 		if ((*stack_a)->data > (*stack_a)->next->data)
-// 			swap_a(stack_a);
-// 		else
-// 			rev_rotate_a(stack_a);
-// 	}
-// }
 
 void	sort_four_to_five(t_node **stack_a, t_node **stack_b)
 {
