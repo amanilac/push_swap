@@ -104,6 +104,7 @@ debug_bonus: .debug_bonus
 clean: .clean
 
 fclean: .clean
+	@make fclean -C ./libft
 	@echo "$(GREY)$(SOFT_NAME) $(DEFAULT)| $(RED)Removing $(DEFAULT)$(NAME) and $(DEBUG_NAME)"
 	@rm -rf $(NAME) $(DEBUG_NAME)
 
