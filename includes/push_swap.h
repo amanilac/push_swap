@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amanilac <amanilac@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 11:27:44 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/18 17:19:29 by amanilac         ###   ########.fr       */
+/*   Updated: 2024/06/24 13:02:06 by annamanilac      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../libft/libft.h"
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_node
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_comms.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amanilac <amanilac@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 13:34:28 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/17 18:07:42 by amanilac         ###   ########.fr       */
+/*   Updated: 2024/06/24 12:44:09 by annamanilac      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

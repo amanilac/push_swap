@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amanilac <amanilac@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 16:50:06 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/17 17:29:42 by amanilac         ###   ########.fr       */
+/*   Updated: 2024/06/24 13:03:56 by annamanilac      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int	ps_atoi(const char *str)
 	nbr = 0;
 	while (*str && ft_isdigit(*str))
 	{
-		if (nbr > _LONG_MAX / 10 || (nbr == _LONG_MAX / 10 && *str > '7'))
-			exit (69);
+		if (nbr > INT32_MAX / 10 || (nbr == INT32_MAX / 10 && *str > '7'))
+			exit (error_msg("Error: please enter integer value"));
 		nbr = nbr * 10 + (*str++ - '0');
 	}
 	return (nbr * sign);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amanilac <amanilac@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 11:24:29 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/18 17:19:08 by amanilac         ###   ########.fr       */
+/*   Updated: 2024/06/24 12:58:15 by annamanilac      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,15 @@ char	**check_args(int argc, char **argv)
 	return (argv - argc + 1);
 }
 
+void	print_list(t_node *stack)
+{
+	while (stack)
+	{
+		ft_printf("%d\n", stack->data);
+		stack = stack->next;
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	t_node	*stack_a;
@@ -76,6 +85,7 @@ int	main(int argc, char **argv)
 		args++;
 	}
 	sort_stack(&stack_a);
+	print_list(stack_a);
 	free_lst(&stack_a);
 	return (0);
 }
