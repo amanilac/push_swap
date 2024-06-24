@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amanilac <amanilac@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 17:16:20 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/17 18:10:42 by amanilac         ###   ########.fr       */
+/*   Updated: 2024/06/24 14:18:14 by annamanilac      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,58 @@ void	sort_two(t_node **stack_a)
 		swap_a(stack_a);
 }
 
-void	sort_three(t_node **stack_a)
+void sort_three(t_node **stack_a)
 {
-	while (is_sorted(*stack_a) == 1)
+	int first;
+	int sec;
+	int third;
+
+	first = (*stack_a)->sequence;
+	sec = (*stack_a)->next->sequence;
+	third = (*stack_a)->next->next->sequence;
+	if ((is_sorted(*stack_a)) == 0)
+		return;
+	if (first < sec && first < third)
 	{
-		if ((*stack_a)->data > (*stack_a)->next->data)
-			swap_a(stack_a);
-		else
-			rev_rotate_a(stack_a);
+		rev_rotate_a(stack_a);
+		swap_a(stack_a);
+	}
+	else if (first > sec && sec < third && first < third)
+		swap_a(stack_a);
+	else if (first < sec && sec > first)
+		rev_rotate_a(stack_a);
+	else if (first > sec && sec < third && first > third)
+		rotate_a(stack_a);
+	else
+	{
+		swap_a(stack_a);
+		rev_rotate_a(stack_a);
 	}
 }
 
+// void	sort_three(t_node **stack_a)
+// {
+// 	while (is_sorted(*stack_a) == 1)
+// 	{
+// 		if ((*stack_a)->data > (*stack_a)->next->data)
+// 			swap_a(stack_a);
+// 		else
+// 			rev_rotate_a(stack_a);
+// 	}
+// }
+
 void	sort_four_to_five(t_node **stack_a, t_node **stack_b)
 {
-	int		smallest;
+	int		smallest_i;
 	int		index;
 
 	index = 0;
 	while (lst_size(*stack_a) > 3)
 	{
-		smallest = get_smallest(*stack_a);
+		smallest_i = get_smallest(*stack_a);
 		while ((*stack_a)->sequence != index)
 		{
-			if (smallest < lst_size(*stack_a))
+			if (smallest_i + 1 < lst_size(*stack_a))
 				rotate_a(stack_a);
 			else
 				rev_rotate_a(stack_a);

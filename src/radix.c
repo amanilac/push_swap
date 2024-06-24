@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amanilac <amanilac@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:01:33 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/18 16:42:27 by amanilac         ###   ########.fr       */
+/*   Updated: 2024/06/24 13:55:11 by annamanilac      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ void	radix_sort(t_node **stack_a, t_node **stack_b)
 		}
 		i++;
 		while (*stack_b)
-			push_a(stack_a, stack_b);
+				push_a(stack_a, stack_b);
 	}
 }
