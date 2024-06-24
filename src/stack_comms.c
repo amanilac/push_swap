@@ -64,4 +64,3 @@ void	init_a(t_node **stack, int num)
 	new->data = num;
 	new->next = NULL;
 }
-

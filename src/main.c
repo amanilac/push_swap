@@ -37,7 +37,7 @@ char	**check_args(int argc, char **argv)
 		split = argv;
 	}
 	if (argv == NULL)
-		exit (error_msg ("Error: Malloc failure\n"));
+		exit(error_msg("Error: Malloc failure\n"));
 	while (*argv)
 	{
 		if (is_int(*argv) == 1)
@@ -54,19 +54,6 @@ char	**check_args(int argc, char **argv)
 	return (argv - argc + 1);
 }
 
-// void	print_list(t_node *stack)
-// {
-// 	t_node	*temp;
-
-// 	temp = stack;
-// 	while (temp)
-// 	{
-// 		ft_printf("num: %d, sequence: %d index: %d\n",
-// 			temp->data, temp->sequence, temp->index);
-// 		temp = temp->next;
-// 	}
-// }
-
 int	main(int argc, char **argv)
 {
 	t_node	*stack_a;
@@ -81,7 +68,7 @@ int	main(int argc, char **argv)
 	if (!args)
 	{
 		free_arr(args);
-		exit (error_msg("Error: Malloc failure\n"));
+		exit(error_msg("Error: Malloc failure\n"));
 	}
 	while (*args)
 	{
@@ -89,5 +76,6 @@ int	main(int argc, char **argv)
 		args++;
 	}
 	sort_stack(&stack_a);
+	free_lst(&stack_a);
 	return (0);
 }

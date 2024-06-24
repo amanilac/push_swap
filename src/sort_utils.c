@@ -55,7 +55,7 @@ void	sort_stack(t_node **stack_a)
 
 	stack_b = NULL;
 	if (!stack_a)
-		exit (69);
+		error_msg("Error");
 	size = lst_size(*stack_a);
 	assign_sequence(*stack_a);
 	if (size == 2)

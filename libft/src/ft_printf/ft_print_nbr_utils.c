@@ -36,11 +36,6 @@ void	print_unsigned_nbr(unsigned int n, t_print *res)
 	unsigned long	nbr;
 
 	nbr = n;
-	if (nbr < 0)
-	{
-		ft_print_char('-', res);
-		nbr = -nbr;
-	}
 	if (nbr > 9)
 	{
 		print_nbr(nbr / 10, res);

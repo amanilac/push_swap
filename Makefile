@@ -4,7 +4,7 @@ DEBUG_NAME = debug.out
 STANDARD_CC = cc
 STANDARD_FLAGS = -Wall -Wextra -Werror
 DEBUG_CC = cc
-DEBUG_FLAGS = -g -fsanitize=address,undefined,integer
+DEBUG_FLAGS = -g -O0 -fsanitize=address,undefined,integer
 
 SRC_DIR = src/
 OBJ_DIR = objs/

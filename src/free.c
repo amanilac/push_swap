@@ -15,7 +15,7 @@
 int	error_msg(char *str)
 {
 	ft_printf("%s\n", str);
-	return (0);
+	exit (-1);
 }
 
 void	free_lst(t_node **stack)
