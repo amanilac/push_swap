@@ -6,7 +6,7 @@
 /*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 16:50:06 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/24 13:03:56 by annamanilac      ###   ########.fr       */
+/*   Updated: 2024/06/24 15:14:29 by amanilac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ps_atoi(const char *str)
 	nbr = 0;
 	while (*str && ft_isdigit(*str))
 	{
-		if (nbr > INT32_MAX / 10 || (nbr == INT32_MAX / 10 && *str > '7'))
+		if (nbr > INT_MAX / 10 || (nbr == INT_MAX / 10 && *str > '7'))
 			exit (error_msg("Error: please enter integer value"));
 		nbr = nbr * 10 + (*str++ - '0');
 	}
