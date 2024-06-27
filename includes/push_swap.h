@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
+/*   By: amanilac <amanilac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 11:27:44 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/24 15:14:01 by amanilac         ###   ########.fr       */
+/*   Updated: 2024/06/27 17:11:17 by amanilac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef struct s_node
 
 char	**check_args(int argc, char **argv);
 int		is_int(char *argv);
-// void	print_list(t_node *stack);
 
 void	check_dupes(t_node *stack, int num);
 t_node	*getlast(t_node *lst);
