@@ -9,7 +9,6 @@ DEBUG_FLAGS = -g -fsanitize=address,undefined,integer
 
 SRC_DIR = src/
 SRC_PATH_MANDATORY= 
-SRC_PATH_BONUS= ../bonus/
 OBJ_DIR = objs/
 
 SRC_NAMES =	ft_atoi.c		ft_bzero.c		ft_isalnum.c	ft_isalpha.c	ft_isascii.c \
@@ -118,7 +117,7 @@ re: fclean all
 GREEN = \033[38;5;84m
 RED = \033[38;5;9m
 BLUE = \033[38;5;45m
-#PURPLE = \033[38;5;63m
+PURPLE = \033[38;5;63m
 PINK = \033[38;5;207m
 PURPLE = \033[38;5;165m
 BLACK = \033[38;5;0m
