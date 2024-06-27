@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: annamanilaci <annamanilaci@student.42.f    +#+  +:+       +#+        */
+/*   By: amanilac <amanilac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 17:16:20 by amanilac          #+#    #+#             */
-/*   Updated: 2024/06/24 14:56:53 by annamanilac      ###   ########.fr       */
+/*   Updated: 2024/06/27 17:03:24 by amanilac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ void	sort_two(t_node **stack_a)
 		swap_a(stack_a);
 }
 
-void sort_three(t_node **stack_a)
+void	sort_three(t_node **stack_a)
 {
-	int first;
-	int sec;
-	int third;
+	int	first;
+	int	sec;
+	int	third;
 
 	first = (*stack_a)->sequence;
 	sec = (*stack_a)->next->sequence;
 	third = (*stack_a)->next->next->sequence;
 	if ((is_sorted(*stack_a)) == 0)
-		return;
+		return ;
 	if (first < sec && first < third)
 	{
 		rev_rotate_a(stack_a);
